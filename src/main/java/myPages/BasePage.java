@@ -51,7 +51,7 @@ public class BasePage extends Page {
         try {
             wait.until(ExpectedConditions.titleIs(title));
         } catch (Exception e) {
-            System.out.println("Some exception occured while waiting for the element : " +title);
+            System.out.println("Some exception occured while waiting for the element : " +title );
             e.printStackTrace();
         }
 
