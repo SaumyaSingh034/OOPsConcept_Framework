@@ -38,4 +38,12 @@ public class LoginPage  extends BasePage {
     public void getLoginPageHeader(){
         getPageHeader(header);
     }
+
+    public HomePage doLogin(String userName, String password){
+        getEmailId().sendKeys(userName);
+        getPassword().sendKeys(password);
+        getLoginBtn().click();
+
+        return getInstance(HomePage.class);
+    }
 }

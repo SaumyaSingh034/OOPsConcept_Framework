@@ -37,7 +37,8 @@ public abstract class Page {
         try {
             return pageClass.getDeclaredConstructor(WebDriver.class).newInstance(this.driver);
         } catch (Exception e) {
-            throw new RuntimeException(e);
+           e.printStackTrace();
+           return null;
         }
     }
 }
